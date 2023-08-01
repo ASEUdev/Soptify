@@ -1,61 +1,105 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>Spotify</title>
-  <link rel="stylesheet" href="dist\style.css">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Spotify</title>
+    <link rel="stylesheet" href="login/dist/style.css" />
+  </head>
+  <body>
+    <div class="background">
+      <div class="account">
+        <div class="movebox">
+          <!-- Formulario de registro -->
+          <form id="registrationForm" method="post">
+            <div class="signup">
+              <h2>Register here</h2>
+              <p class="tarjeta">Username</p>
+              <input type="text" name="username" required />
+              <p class="tarjeta">Password</p>
+              <input type="password" name="password" required />
+              <p class="tarjeta">Password again</p>
+              <input type="password" name="confirm_password" required />
+              <br />
+              <br />
+              <button type="button" onclick="registerUser()">Registrar</button>
+            </div>
+          </form>
 
-</head>
-<body>
-<!-- partial:index.partial.html -->
-<div class="background">
-  <div class="account">
-    <div class="movebox">
-      <div class="signup">
-        <h2>Register here</h2>
-        <p>Username</p>
-        <input></input>
-        <p>Full name</p>
-        <input></input>
-        <p>password</p>
-        <input></input>
-        <p>password again </p>
-        <input></input>
-        <br/>
-        <br/>
-        <a href="#">
-          <p>Login</p>
-        </a>
+          <!-- Formulario de inicio de sesión -->
+          <div class="login">
+            <h2>Inicio de sesion</h2>
+            <p class="tarjeta">Username</p>
+            <input type="text" name="username" required />
+            <p class="tarjeta">Password</p>
+            <input type="password" name="password" required />
+            <br />
+            <br />
+            <input type="submit" name="login" value="Login" />
+          </div>
+        </div>
+
+        <!-- Contenido de "¿No tienes cuenta?" -->
+        <div class="content">
+          <h2>¿No tienes cuenta?</h2>
+          <p>Texto aqui</p>
+          <a href="#" class="button to-left">Registrar usuario</a>
+          <div class="center">
+            <div class="photo-frame">
+              <img src="login/img/cody.jpg" alt="Foto" class="photo" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Contenido de "¿Tienes Cuenta?" -->
+        <div class="content">
+          <h2>¿Tienes Cuenta?</h2>
+          <p>Texto aqui</p>
+          <a href="#" class="button to-right">Iniciar sesion</a>
+          <div class="center">
+            <div class="photo-frame">
+              <img src="login/img/cody.jpg" alt="Foto" class="photo" />
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="login">
-        <h2>Login here</h2>
-        <p>Username</p>
-        <input></input>
-        <p>password</p>
-        <input></input>
-        <br/>
-        <br/>
-        <a href="#">
-          <p>Login</p>
-        </a>
-      </div>
     </div>
-    <div class="content">
-      <h2>Don't have an account?</h2>
-      <p>Save sneakers to your personal wishlist, order easier and faster, save your address(es), check your order details, and more</p>
-      <p>
-        <a href="#" class="button to-left">Register here</a>
-    </div>
-    <div class="content">
-      <h2>Have an account?</h2>
-      <p>Already registered? If you have an account with us, please log in.</p>
-      <a href="#" class="button to-right">Login here</a>
-    </div>
-  </div>
-</div>
-<!-- partial -->
-<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src='//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js'></script>
-<script  src="dist\script.js"></script>
-</body>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <script src="login/dist/script.js"></script>
+    <script>
+      function registerUser() {
+        var username = document.querySelector('input[name="username"]').value;
+        var password = document.querySelector('input[name="password"]').value;
+        var confirmPassword = document.querySelector(
+          'input[name="confirm_password"]'
+        ).value;
+
+        // Validar si las contraseñas coinciden
+        if (password !== confirmPassword) {
+          showMessage("Las contraseñas no coinciden.", "error");
+        } else {
+          $.ajax({
+            type: "POST",
+            url: "register.php",
+            data: { username: username, password: password },
+            success: function (response) {
+              showMessage(response.message, response.status);
+            },
+            error: function () {
+              showMessage("Error al procesar la solicitud.", "error");
+            },
+          });
+        }
+      }
+
+      function showMessage(message, status) {
+        var messageContainer = document.getElementById("messageContainer");
+        messageContainer.innerHTML = ""; // Limpiar contenido anterior
+        var messageElement = document.createElement("p");
+        messageElement.textContent = message;
+        messageElement.style.color = status === "success" ? "green" : "red";
+        messageContainer.appendChild(messageElement);
+      }
+    </script>
+  </body>
 </html>
