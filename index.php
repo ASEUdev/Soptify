@@ -13,7 +13,7 @@
       <div class="movebox">
         <!-- Formulario de registro -->
         <form id="registrationForm" method="post" action="login/src/register.php"">
-          <div class="signup">
+          <div class=" signup">
             <h2>Register here</h2>
             <p class="tarjeta">Username</p>
             <input type="text" name="username" required />
@@ -29,18 +29,18 @@
         </form>
 
         <!-- Formulario de inicio de sesión -->
-         <form id="loginForm" method="post" action="login/src/login.php">
-        <div class="login">
-          <h2>Inicio de sesion</h2>
-          <p class="tarjeta">Username</p>
-          <input type="text" name="username" required />
-          <p class="tarjeta">Password</p>
-          <input type="password" name="password" required />
-          <br />
-          <br />
-          <input type="submit" name="login" value="Login" />
-        </div>
-      </form>
+        <form id="loginForm" method="post" action="login/src/login.php">
+          <div class="login">
+            <h2>Inicio de sesion</h2>
+            <p class="tarjeta">Username</p>
+            <input type="text" name="username" required />
+            <p class="tarjeta">Password</p>
+            <input type="password" name="password" required />
+            <br />
+            <br />
+            <input type="submit" name="login" value="Login" />
+          </div>
+        </form>
       </div>
 
       <!-- Contenido de "¿No tienes cuenta?" -->
@@ -74,5 +74,4 @@
   <script src="login/src/validatePassword.js"></script>
   <!-- <script src="login/src/register.js"></script> -->
 </body>
-
 </html>
