@@ -29,6 +29,7 @@
         </form>
 
         <!-- Formulario de inicio de sesión -->
+         <form id="loginForm" method="post" action="login/src/login.php">
         <div class="login">
           <h2>Inicio de sesion</h2>
           <p class="tarjeta">Username</p>
@@ -39,6 +40,7 @@
           <br />
           <input type="submit" name="login" value="Login" />
         </div>
+      </form>
       </div>
 
       <!-- Contenido de "¿No tienes cuenta?" -->
