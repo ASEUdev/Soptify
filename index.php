@@ -72,6 +72,7 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
   <script src="login/dist/script.js"></script>
   <script src="login/src/validatePassword.js"></script>
+  <script src="login/src/register.js"></script>
   <!-- <script src="login/src/register.js"></script> -->
 </body>
 </html>
