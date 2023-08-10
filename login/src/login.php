@@ -44,11 +44,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo "<meta http-equiv='refresh' content='0;url=../../'>";
         } else {
             // Contraseña incorrecta
-            $error_message = "Nombre de usuario o contraseña incorrectos.";
+            echo "<script>alert('Nombre de usuario o contraseña incorrectos.')</script>";
+            echo "<meta http-equiv='refresh' content='0;url=../../'>";
         }
     } else {
         // Usuario no encontrado
-        $error_message = "Nombre de usuario o contraseña incorrectos.";
+        echo "<script>alert('El usuario no se encuentra en nuestra base de datos')</script>";
+        echo "<meta http-equiv='refresh' content='0;url=../../'>";
     }
 
     // Cerrar la conexión
