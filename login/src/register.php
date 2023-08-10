@@ -1,41 +1,47 @@
 <?php
 require_once 'conn.php';
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Obtener datos del formulario
+    $username = $_POST["username"];
+    $password = $_POST["password"];
 
-// Verificamos si se ha enviado el formulario
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Obtenemos los datos ingresados por el usuario
-    $nombre = $_POST['username'];
-    $password = $_POST['password'];
-    try {
-        // Conectamos a la base de datos
-        $mysqli = conn();
+    // Crear conexión a la base de datos (ajustar según tus credenciales)
+    $conn = conn();
 
-        // Verificamos si el usuario ya existe en la base de datos
-        $stmt = $mysqli->prepare("SELECT * FROM users WHERE user = ?");
-        $stmt->bind_param('s', $nombre);
-        $stmt->execute();
-
-        if ($stmt->fetch()) {
-            // El usuario ya existe en la base de datos
-            echo "El usuario ya existe en la base de datos.";
-        } else {
-            // Insertamos el usuario en la base de datos
-            $stmt = $mysqli->prepare("INSERT INTO users (user, password) VALUES (?, ?)");
-            $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-            $stmt->bind_param('ss', $nombre, $hashed_password);
-            $stmt->execute();
-
-            // El usuario fue insertado correctamente en la base de datos
-            echo "El usuario fue registrado correctamente.";
-            header("Location: index.php");
-            exit();
-        }
-
-        // Cerramos la conexión a la base de datos
-        $mysqli->close();
-    } catch (Exception $e) {
-        // Hubo un error al conectarse a la base de datos o al realizar la consulta
-        echo "Hubo un error al registrar el usuario: " . $e->getMessage();
+    // Verificar la conexión
+    if ($conn->connect_error) {
+        die("Conexión fallida: " . $conn->connect_error);
     }
+
+    // Verificar si el nombre de usuario ya existe
+    $sqlCheckUser = "SELECT * FROM user WHERE username=?";
+    $stmt = $conn->prepare($sqlCheckUser);
+    $stmt->bind_param("s", $username);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($result->num_rows > 0) {
+        // El nombre de usuario ya existe
+        $text = "El nombre de usuario ya está en uso. Por favor, elige otro.";
+        echo "<script>alert('$text')</script>";
+        echo "<meta http-equiv='refresh' content='0;url=../../'>";
+    } else {
+        // Insertar el nuevo usuario en la base de datos
+        $sqlInsertUser = "INSERT INTO user (username, password) VALUES (?, ?)";
+        $stmt = $conn->prepare($sqlInsertUser);
+        $hashedPassword = password_hash($password, PASSWORD_DEFAULT); // Hash de la contraseña
+        $stmt->bind_param("ss", $username, $hashedPassword);
+        if ($stmt->execute()) {
+            echo "<meta http-equiv='refresh' content='0;url=../../'>";
+            echo "<script>alert('Usuario creado correctamente')</script>";
+        } else {
+            $text = "Error al crear la sesión: " . $stmt->error;
+            echo "<script>alert('$text')</script>";
+            echo "<meta http-equiv='refresh' content='0;url=../../'>";
+        }
+    }
+    // Cerrar conexión
+    $stmt->close();
+    $conn->close();
 }
 ?>
