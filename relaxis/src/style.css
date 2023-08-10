@@ -1,0 +1,62 @@
+.main-menu {
+  display: inline-block;
+  vertical-align: top;
+  margin: 20px;
+}
+
+
+.main-menu th {
+  font-size: 20px; /* Tamaño de fuente más grande para los encabezados */
+}
+
+.main-menu table {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Alinea verticalmente el contenido */
+  margin: 0 auto;
+  color: black;
+  font-size: 14px;
+  border: 1px solid black;
+  border-collapse: collapse;
+  table-layout: fixed;
+  flex-direction: column;
+  width: 100%;
+  /* Ancho de la tabla al 100% */
+}
+
+thead {
+  width: 100%;
+  /* Ancho del thead al 100% */
+}
+
+th,
+td {
+  font-size: 16px; /* Tamaño de fuente más grande */
+  padding: 10px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+th:not(:last-child),
+td:not(:last-child) {
+  border-right: none;
+}
+
+/* Ajusta la altura de las filas del encabezado */
+thead tr {
+  height: 40px;
+  /* Ajusta según la altura deseada */
+}
+
+.layout .sidebar .pro-sidebar-logo > div a {
+  color: white;
+  text-decoration: none;
+}
+td a {
+  color: black;
+}
+td a:visited {
+  color: black;
+}
