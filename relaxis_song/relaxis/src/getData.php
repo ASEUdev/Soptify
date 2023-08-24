@@ -1,6 +1,6 @@
 <?php
 // ARREGLAR ESTO 
-require_once 'C:\xampp\htdocs\relaxis_song\login\src\conn.php';
+require_once '';
 function getUser($id){
     
     $conn = conn();
