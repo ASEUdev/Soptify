@@ -119,7 +119,7 @@ if (!isset($_SESSION["user_id"])) {
 								</div>
 								<div class="col invisible" id="soundCard">
 									<div class="card w-100" style="width: 18rem;">
-										<button><i id="ancla" class="ri-anchor-line"></i></button>
+										<button id="btnAncla"><i id="ancla" class="ri-anchor-line"></i></button>
 										<img id="imgPlayer" class="card-img-top unlocked" alt="...">
 										<div class="card-body">
 											<audio id="audioPlayer" style="width: 100%" controls></audio>
