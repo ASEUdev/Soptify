@@ -73,7 +73,7 @@ categoryItems.forEach((item) => {
 
 document.addEventListener("DOMContentLoaded", function () {
   const imgPlayer = document.getElementById("imgPlayer");
-  const toggleButton = document.getElementById("ancla");
+  const toggleButton = document.getElementById("btnAncla");
   const icon = document.getElementById("ancla");
 
   toggleButton.addEventListener("click", function () {
