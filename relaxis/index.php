@@ -1,11 +1,9 @@
 <?php
 session_start();
 if (!isset($_SESSION["user_id"])) {
-	// Redirigir al formulario de inicio de sesión si el usuario no ha iniciado sesión
 	header("Location: ../");
 	exit();
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +12,6 @@ if (!isset($_SESSION["user_id"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Relaxis</title>
-    <!-- URL PARA EXTRACION DE ICONOS-->
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css'>
     <link rel='stylesheet' href='https://unpkg.com/css-pro-layout@1.1.0/dist/css/css-pro-layout.css'>
     <link rel='stylesheet'
@@ -25,19 +22,17 @@ if (!isset($_SESSION["user_id"])) {
 </head>
 
 <body>
-    <!-- partial:index.partial.html -->
 	<div class="layout has-sidebar fixed-sidebar fixed-header">
-		<aside id="sidebar" class="sidebar break-point-sm has-bg-image">
+		<aside id="sidebar" class="sidebar break-point-sm has-bg-image collapsed">
 			<a id="btn-collapse" class="sidebar-collapser"><i class="ri-arrow-left-s-line"></i></a>
 			<div class="image-wrapper">
-				<!-- <img src="assets/images/sidebar-bg.jpg" alt="sidebar background" /> -->
 			</div>
 			<div class="sidebar-layout">
 				<div class="sidebar-header">
 					<div class="pro-sidebar-logo">
 						<div>
 							<a href="#" onclick="nothingHere(); return false;" id="Logo">
-								R
+								<img src="img/logo/lgblack.png" alt="logo" id="imgLogo"></img>
 							</a>
 						</div>
 						<h5>&ensp;Relaxis Song</h5>
@@ -101,7 +96,6 @@ if (!isset($_SESSION["user_id"])) {
             </main>
         </div>
     </div>
-    <!-- partial -->
     <script src='https://unpkg.com/@popperjs/core@2'></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="dist/script.js"></script>

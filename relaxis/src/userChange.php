@@ -2,7 +2,7 @@
 include 'getData.php';
 session_start();
 if (!isset($_SESSION["user_id"])) {
-    // Redirigir al formulario de inicio de sesión si el usuario no ha iniciado sesión
+    
     header("Location: ../");
     exit();
 } else {
@@ -17,13 +17,13 @@ if (!isset($_SESSION["user_id"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Relaxis</title>
     <!-- URL PARA EXTRACION DE ICONOS-->
-    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css'>
-    <link rel='stylesheet' href='https://unpkg.com/css-pro-layout@1.1.0/dist/css/css-pro-layout.css'>
+    <link rel='stylesheet' href='https:
+    <link rel='stylesheet' href='https:
     <link rel='stylesheet'
-        href='https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&amp;display=swap'>
+        href='https:
     <link rel="stylesheet" href="../dist/style.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https:
     <link rel="stylesheet" href="profileStyle.css">
 </head>
 
@@ -176,10 +176,10 @@ if (!isset($_SESSION["user_id"])) {
         </div>
     </div>
     <!-- partial -->
-    <script src='https://unpkg.com/@popperjs/core@2'></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src='https:
+    <script src="https:
     <script src="../dist/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https:
 </body>
 
 </html>

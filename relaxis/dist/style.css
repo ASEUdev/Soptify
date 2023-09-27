@@ -19,7 +19,7 @@
 }
 
 .sidebar {
-  color: #7d84ab;
+  color: #EEE0CB;
   overflow-x: hidden !important;
   position: relative;
 }
@@ -27,11 +27,12 @@
   border-radius: 4px;
 }
 .sidebar:hover::-webkit-scrollbar-thumb {
-  background-color: #1a4173;
+  background-color: #1E2684;
 }
 .sidebar::-webkit-scrollbar {
   width: 6px;
-  background-color: #0c1e35;
+ 
+  background-color: #1E2684; 
 }
 .sidebar .image-wrapper {
   overflow: hidden;
@@ -58,7 +59,8 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  background-color: #0c1e35;
+ 
+  background-color: #1E2684;
   z-index: 2;
 }
 .sidebar .sidebar-layout .sidebar-header {
@@ -263,7 +265,7 @@
 }
 .layout.rtl .sidebar .menu .menu-item a .menu-icon {
   margin-left: 10px;
-  margin-right: 0;
+  margin-right: 0; 
 }
 .layout.rtl .sidebar .menu .menu-item.sub-menu > a::after {
   transform: rotate(135deg);
@@ -293,6 +295,7 @@ body {
   font-family: "Poppins", sans-serif;
   color: #3f4750;
   font-size: 0.9rem;
+  background-color: #BFD7EA !important;
 }
 
 a {
@@ -321,7 +324,7 @@ a {
   color: white;
   font-size: 24px;
   font-weight: 700;
-  background-color: #ff8100;
+  background-color: #bfd7ea;
   margin-right: 10px;
 }
 .layout .sidebar .pro-sidebar-logo > h5 {
@@ -377,7 +380,8 @@ a {
   z-index: 111;
   cursor: pointer;
   color: white;
-  box-shadow: 1px 1px 4px #0c1e35;
+  /**color del fondo */
+  box-shadow: 1px 1px 4px rgb(30, 38, 132);
 }
 .layout .sidebar.collapsed .pro-sidebar-logo > h5 {
   opacity: 0;
@@ -393,6 +397,7 @@ a {
 }
 
 .badge {
+  color: #BAA898 !important;
   display: inline-block;
   padding: 0.25em 0.4em;
   font-size: 75%;
@@ -402,11 +407,12 @@ a {
   white-space: nowrap;
   vertical-align: baseline;
   border-radius: 0.25rem;
-  color: #fff;
-  background-color: #6c757d;
+  /** Color titulo */
+ 
+  background-color: #bfd7ea;
 }
 .badge.primary {
-  background-color: #ab2dff;
+  background-color: #bfd7ea;
 }
 .badge.secondary {
   background-color: #079b0b;

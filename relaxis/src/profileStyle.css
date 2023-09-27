@@ -41,7 +41,7 @@ textarea {
   font-size: 1rem;
   width: 100%;
   box-sizing: border-box;
-  color: #374151;
+  color: white;
 }
 
 .btn-save {
@@ -55,7 +55,7 @@ textarea {
 }
 
 .btn-save:hover {
-  background-color: #6c76ae;
+  background-color: #1c225f;
 }
 
 .modify-profile {

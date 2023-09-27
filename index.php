@@ -12,10 +12,9 @@
   <div class="background">
     <div class="account">
       <div class="movebox">
-        <!-- Formulario de registro -->
         <form id="registrationForm" method="post" action="login/src/register.php"">
           <div class=" signup">
-            <h2>Register here</h2>
+            <h2>Registrar Usuario</h2>
             <p class="tarjeta">Username</p>
             <input type="text" name="username" required />
             <p class="tarjeta">Password</p>
@@ -29,7 +28,6 @@
           </div>
         </form>
 
-        <!-- Formulario de inicio de sesión -->
         <form id="loginForm" method="post" action="login/src/login.php">
           <div class="login">
             <h2>Inicio de sesion</h2>
@@ -44,26 +42,22 @@
         </form>
       </div>
 
-      <!-- Contenido de "¿No tienes cuenta?" -->
       <div class="content">
         <h2>¿No tienes cuenta?</h2>
-        <p>Texto aqui</p>
         <a href="#" class="button to-left">Registrar usuario</a>
         <div class="center">
           <div class="photo-frame">
-            <img src="login/img/cody.jpg" alt="Foto" class="photo" />
+            <img src="login/img/lgwhite.png" alt="Foto" class="photo" />
           </div>
         </div>
       </div>
 
-      <!-- Contenido de "¿Tienes Cuenta?" -->
       <div class="content">
         <h2>¿Tienes Cuenta?</h2>
-        <p>Texto aqui</p>
         <a href="#" class="button to-right">Iniciar sesion</a>
         <div class="center">
           <div class="photo-frame">
-            <img src="login/img/cody.jpg" alt="Foto" class="photo" />
+            <img src="login/img/lgwhite.png" alt="Foto" class="photo" />
           </div>
         </div>
       </div>
@@ -73,6 +67,5 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
   <script src="login/dist/script.js"></script>
   <script src="login/src/validatePassword.js"></script>
-  <script src="login/src/register.js"></script>
 </body>
 </html>

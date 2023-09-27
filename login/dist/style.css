@@ -101,28 +101,29 @@ body {
 }
 .center {
   display: flex;
-  justify-content: flex-start; /* Alineación horizontal a la izquierda */
-  align-items: flex-start; /* Alineación vertical hacia arriba */
+  justify-content: flex-start;
+  align-items: flex-start;
   width: 100%;
   height: 100%;
 }
 
 .photo-frame {
-  width: 100px; /* Tamaño del marco */
-  height: 100px; /* Tamaño del marco */
+  width: 100px;
+  height: 100px;
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* Alineación vertical hacia arriba */
-  overflow: hidden; /* Ocultar cualquier contenido que desborde el marco */
-  border: 2px solid black; /* Borde del marco */
-  
-  /* Desplazamiento del marco */
-  margin: 30px 60px; /* Mover 30px hacia abajo y 60px hacia la derecha */
+  align-items: flex-start;
+  overflow: hidden;
+
+  margin: 30px 60px;
 }
 
 .photo {
-  width: 100%; /* La imagen ocupará el 100% del tamaño del marco */
-  height: auto; /* Altura automática para mantener la relación de aspecto */
-  object-fit: cover; /* Ajustar la imagen para cubrir todo el marco sin deformarse */
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
-/*# sourceMappingURL=style.css.map */
+
+.button:hover {
+  color: #8ec9d2;
+}

@@ -1,5 +1,5 @@
 <?php
-// ARREGLAR ESTO 
+
 require_once 'config.php'; 
 function conn1(){
     $conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
