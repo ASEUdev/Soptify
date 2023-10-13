@@ -86,3 +86,7 @@ a:-webkit-any-link {
 #imgLogo {
   max-width: 100%;
 }
+#presentacion{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 36px;
+}

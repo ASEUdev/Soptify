@@ -1,22 +1,22 @@
 const soundNames = {
-  naturaleza: ["León", "Elefante", "Lobo"],
-  instrumental: ["Guitarra", "Piano"],
-  ruido: ["Lluvia", "Aves", "Arroyo"],
-  casero: ["Lluvia", "Aves", "Arroyo"],
+  naturaleza: ["Bosque", "Cascada", "Jungla", "Rio", "Tormenta", "Viento"],
+  instrumental: ["4K Forest", "Autumn Forest", "Dark Forest", "Into the unknown", "Rain"],
+  ruido: ["Ambiente Coches", "Ambiente Nocturne", "City Noises", "City Street", "Ciudad", "New York City"],
+  casero: ["Cleaner", "Escoba", "Limpieza", "Sonidos"],
 };
 
 const soundFiles = {
-  naturaleza: ["audio.mp3", "elefante.mp3", "lobo.mp3"],
-  instrumental: ["audio2.mp3", "piano.mp3"],
-  ruido: ["lluvia.mp3", "aves.mp3", "arroyo.mp3"],
-  casero: ["lluvia.mp3", "aves.mp3", "arroyo.mp3"],
+  naturaleza: ["bosque.mp3", "cascada.mp3", "jungla.mp3", "rio.mp3", "tormenta.mp3", "viento.mp3"],
+  instrumental: ["4K_Forest.mp3", "AUTUMN_FOREST.mp3", "Dark_Forest.mp3", "Into_the_unknown.mp3", "rain.mp3"],
+  ruido: ["Ambiente_Coches.mp3", "Ambiente_nocturno.mp3", "City_Noises.mp3", "City_Street.mp3", "Ciudad.mp3", "New_York_City.mp3"],
+  casero: ["cleaner.mp3", "escoba.mp3", "limpieza.mp3", "sonidos.mp3"],
 };
 
 const imageFiles = {
-  naturaleza: ["img1.jpeg", "elefante.jpg", "lobo.jpg"],
-  instrumental: ["img1.jpeg", "piano.jpg"],
-  ruido: ["lluvia.jpg", "aves.jpg", "arroyo.jpg"],
-  casero: ["lluvia.jpg", "aves.jpg", "arroyo.jpg"],
+  naturaleza: ["bosque.webp", "cascada.webp", "jungla.jpg", "rio.jpg", "tormenta.jpg", "viento.webp"],
+  instrumental: ["4K_Forest.jpg", "AUTUMN_FOREST.jpg", "Dark_Forest.jpg", "Into_the_unknown.jpg", "rain.jpg"],
+  ruido: ["Ambiente_Coches.jpg", "Ambiente_nocturno.jpg", "City_Noises.jpg", "City_Steet.jpg", "Ciudad.jpg", "New_York_York.jpg"],
+  casero: ["cleaner.jpg", "escoba.jpg", "limpieza.jpg", "sonido.jpg"],
 };
 const favorites = [];
 
