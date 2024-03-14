@@ -1,12 +1,29 @@
 # RelaxisSong
-Bienvenid@ a Relaxis Song
 
-Descubre una colección única de sonidos diseñados para influir en tu estado de ánimo. Sumérgete en una amplia variedad de sonidos, cada uno cuidadosamente seleccionado para evocar emociones específicas.
+Este proyecto es una página web con funcionalidad de inicio de sesión y una interfaz para reproducir música.
 
-¿Cómo Funciona?
+## Estructura del Proyecto
 
-Selecciona la categoría con la temática que más se acerque a tus gustos, y permite que nuestros selectos sonidos te guíen hacia una experiencia de relajación, dejando el estrés atrás.
+El proyecto está organizado en las siguientes carpetas:
 
-Navega a través de la página para guardar tus soundtracks favoritos y disfrutar de diversas imágenes estéticas, además de otras características emocionantes.
+- **`db\`**: Contiene archivos relacionados con la base de datos del sistema.
+- **`login\`**: Archivos relacionados con la funcionalidad de inicio de sesión.
+- **`relaxis\`**: Archivos relacionados con la interfaz de reproducción de música.
+- **`LICENSE.md`**: Archivo que contiene los términos de la licencia del proyecto.
+- **`README.md`**: Este archivo que estás leyendo, proporciona información sobre el proyecto.
+- **`index.php`**: Archivo principal que sirve como punto de entrada a la aplicación.
 
-¡Explora ahora y déjate llevar por la magia de los sonidos!
+## Funcionalidades
+
+- **Inicio de Sesión**: Permite a los usuarios autenticarse para acceder a la página.
+- **Interfaz de Reproducción de Música**: Proporciona una interfaz para reproducir y controlar la música.
+
+## Uso
+
+1. Clona este repositorio en tu máquina local.
+2. Configura la base de datos en la carpeta `db`.
+3. Inicia la aplicación abriendo `index.php` en un servidor web compatible con PHP.
+
+## Licencia
+
+Este proyecto está bajo la licencia [MIT](LICENSE.md). Para más información, consulta el archivo LICENSE.md.
